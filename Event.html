@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div class="fa">
+            <div class='so1' id="so">son</div>
+            <div class="so"></div>
+            <div class="so"></div>
+            <div class="so"></div>
+            <div class="so"></div>
+        </div>
+    </div>
+</body>
+<script>
+    const fa = document.getElementById('fa')
+    const so = document.getElementById('so')
+
+    fa.addEventListener('click', function () {
+        console.log('fujimaopao')
+    }, false)
+    fa.addEventListener('click', function () {
+        console.log('fujibuhuo')
+    }, true)  
+    so.addEventListener('click', function () {
+        console.log('zijimaopao')
+    }, false)
+    so.addEventListener('click', function () {
+        console.log('zijibuhuo')
+    }, true)
+</script>
+<style>
+    .fa {
+        width: 100%;
+        height: 500px;
+        border: 1px solide purple;
+        background: #ccc;
+    }
+
+    .so1 {
+        width: 50px;
+        border-radius: 20px;
+        background: blue;
+        text-align: center;
+        line-height: 50px;
+        margin: 0 auto
+    }
+
+    .so {
+        width: 20px;
+        height: 50px;
+        background: red;
+        margin: 50px
+    }
+</style>
+
+</html>
