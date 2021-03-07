@@ -1,0 +1,8 @@
+
+splice
+传入三个参数，分别是开始位置、0（要删除的元素数量）、插入的元素，返回空数组
+
+let colors = ["red", "green", "blue"];
+let removed = colors.splice(1, 0, "yellow", "orange")
+console.log(colors) // red,yellow,orange,green,blue
+console.log(removed) // []
