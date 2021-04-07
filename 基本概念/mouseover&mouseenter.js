@@ -1,0 +1,5 @@
+鼠标移动到元素上时就会触发mouseenter事件。类似mouseover，他们两者之间的差别就是mouseenter,不会冒泡，mouseover会触发冒泡
+由于mouseenter，不支持事件冒泡，导致一个元素的子元素上进入或者离开的时候会触发mouserover和mouseout
+但是却不会触发mouseenter和mouseleave事件
+
+mouseenter 不会冒泡，mouseover会冒泡
