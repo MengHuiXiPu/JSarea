@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const fn1 = function () {
+            console.log('fangdou ')
+        }
+        const fn2 = function () {
+            console.log('jieliu')
+        }
+        function debounce(fn, await) {
+            var timer = null
+            return function () {
+                clearTimeout(timer)
+                timer = setTimeout(() => {
+                    fn.apply(this, arguments)
+                }, await)
+            }
+        }
+        function throattle() {
+            var t1 = Date.now()
+            return function () {
+                var t2 = Date.now()
+                if (t1 - t2 > await) {
+                    fn.apply(this, arguments)
+                    t1 = Date.now()
+                }
+            }
+        }
+        document.addEventListener('resize', debounce(fn1, 2000))
+
+        document.addEventListener('scroll', throattle(fn2, 2000))
+    </script>
+</body>
+
+</html>
