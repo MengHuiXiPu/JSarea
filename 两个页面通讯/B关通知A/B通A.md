@@ -1,0 +1,1 @@
+页面正常关闭，会先执行window.onbeforeunload ,然后执行window.onunload,,s所以可以在这个地方向A通讯
