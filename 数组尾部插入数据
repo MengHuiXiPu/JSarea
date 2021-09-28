@@ -1,0 +1,25 @@
+数组尾部插入数据
+同样的，在数组尾部插入数据你是否还在用这样的方法？
+
+let arr = [1,2,3]
+arr.push(4)
+console.log(arr) // => [1,2,3,4]
+其实，我们都忽略了数组本身就很方便的数据插入逻辑
+
+let arr = [1,2,3]
+arr[arr.length] = 4
+console.log(arr) // => [1,2,3,4]
+直接上测试用例
+
+let arr = []
+console.time('开始测试 100次 数据操作时 push 的性能')
+for (let i = 0; i < 100; i++) {
+  arr.push('push在测试')
+}
+console.timeEnd('开始测试 100次 数据操作时 push 的性能')
+
+console.time('开始测试 100次 数据操作时 length 的性能')
+for (let i = 0; i < 100; i++) {
+  arr[arr.length] = 'length在测试'
+}
+console.timeEnd('开始测试 100次 数据操作时 length 的性能')
